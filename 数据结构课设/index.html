@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        background-image: url("background.jpg");
+        background-size: 100%;
+    }
+    header{
+        text-align: center;
+        color: antiquewhite;
+        font-size: xx-large;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: 200px 900px auto;
+        grid-template-rows:300px
+    }
+    .operater{
+        border-radius: 20px;
+        background-color: aquamarine;
+        text-align: center;
+    }
+    #mycanvas{
+        border-radius: 20px;
+        background-color: aqua;
+    }
+    
+    #showlist{
+        border-radius: 20px;
+        list-style-type: none;
+        background-color: gray;
+        overflow-x: hidden;
+        overflow-y: unset;
+        height: 300px;
+        margin-top: 0px;
+        padding-left: 0px;
+    }
+    .result{
+        margin-left: 200px;
+        width: 200px;
+        display: grid;
+        grid-template-columns: 200px 200px 600px;
+        grid-template-rows: 200px;
+    }
+    .found{
+        text-align: center;
+        background-color: aquamarine;
+        border-radius: 20px;
+    }
+    #Result{
+        background-color: gray;
+        border-radius: 20px;
+        overflow-x: hidden;
+        overflow-y: unset;
+        
+    }
+    #mycourse{
+        background-color: aquamarine;
+        border-radius: 20px;
+    }
+</style> 
+<body>
+    <header>欢迎来到柯常仁的课设界面</header>
+    <section class="main">
+        <section class="operater">
+            <div>
+                <label for="boy_number">男生数量:</label>
+                <input type="text" id="boy_number">
+            </div>
+            <div>
+                <label for="girl_number">女生数量:</label>
+                <input type="text" id="girl_number" >
+            </div>
+            <div>
+                <label for="song_number">歌曲数量:</label>
+                <input type="text" id="song_number">
+            </div>
+            <button class="start">开始</button>
+        </section>
+        <canvas id="mycanvas" width="900" height="300"></canvas>
+        <ul id="showlist" >
+        </ul>
+    </section>
+    <section class="result">
+        <section class="found">
+            <div>
+                <label for="boy_number_find">男生号数:</label>
+                <input type="text" id="boy_number_find">
+            </div>
+            <div>
+                <label for="girl_number_find">女生号数:</label>
+                <input type="text" id="girl_number_find" >
+            </div>
+            <button id="find_start">查找</button>
+        </section>
+        <section id="Result">
+
+        </section>
+        <section id="mycourse">
+            <p> 任务：一班有m个女生,有n个男生(m不等于n),现要开一个舞会，男女生分别编号坐在舞池的两边的椅子上。每曲开始时,依次从男生和女生中各出一人配对跳舞, 女生可以拒绝与男生跳舞（采用随机数实现），被拒绝的男生回到队列尾，从男生队列选取下一男生直到该女生不拒绝。模拟动态地显示出上述过程。
+                要求:1) 输出每曲配对情况；2) 计算出任何一个男生(编号为X)和任意女生(编号为Y),在第K曲配对跳舞的情况，至少求出K的两个值；3) 进一步实现记录男生被拒绝次数，拒绝次数越多，优先级越低。优先级高的男生优先出队列。提示：可使用多级队列实现。
+                </p>
+        </section>
+    </section>
+    <footer>联系方式:</footer>
+</body>
+<script type = "text/javascript" src = "index.js"> </script>
+</html>
